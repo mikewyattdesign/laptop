@@ -107,7 +107,7 @@ brew update --force # https://github.com/Homebrew/brew/issues/1151
 brew bundle --file=- <<EOF
 tap "thoughtbot/formulae"
 tap "homebrew/services"
-tap "heroku/brew"
+# tap "heroku/brew"
 
 # Unix
 brew "universal-ctags/universal-ctags/universal-ctags", args: ["HEAD"]
@@ -116,35 +116,35 @@ brew "openssl"
 brew "rcm"
 brew "reattach-to-user-namespace"
 brew "the_silver_searcher"
-brew "tmux"
-brew "vim"
-brew "watchman"
+# brew "tmux"
+# brew "vim"
+# brew "watchman"
 brew "zsh"
 
 # Heroku
-brew "heroku/brew/heroku"
-brew "parity"
+# brew "heroku/brew/heroku"
+# brew "parity"
 
 # GitHub
 brew "gh"
 
 # Image manipulation
-brew "imagemagick"
+#brew "imagemagick"
 
 # Programming language prerequisites and package managers
 brew "libyaml" # should come after openssl
 brew "coreutils"
 brew "yarn"
-cask "gpg-suite-no-mail"
+#cask "gpg-suite-no-mail"
 
 # Databases
-brew "postgres", restart_service: :changed
-brew "redis", restart_service: :changed
+#brew "postgres", restart_service: :changed
+#brew "redis", restart_service: :changed
 EOF
 
-fancy_echo "Update heroku binary ..."
-brew unlink heroku
-brew link --force heroku
+#fancy_echo "Update heroku binary ..."
+#brew unlink heroku
+#brew link --force heroku
 
 fancy_echo "Configuring asdf version manager ..."
 if [ ! -d "$HOME/.asdf" ]; then
